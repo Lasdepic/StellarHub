@@ -39,3 +39,18 @@ li a {
   color: #fff;
   text-decoration: none;
 }
+
+.bouttonPost {
+  width: 100%;
+}
+
+.btnProfil {
+  display: flex;
+  gap: 1rem;
+}
+
+.imageUser {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
