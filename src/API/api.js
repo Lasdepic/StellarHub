@@ -14,3 +14,5 @@ async function fetchPost() {
     const data = await posts.json()
     return data;
 }
+
+export { fetchUsers, fetchPost };

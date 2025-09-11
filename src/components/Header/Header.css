@@ -1,17 +1,56 @@
 header {
-    height: 100vh;
-    width: 20vw;
-    background-color: black;
-    position: fixed;
-    top: 0;
+  height: 100vh;
+  width: 30vw;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 li:hover,
 a:hover {
-    color: rgba(254, 153, 0, 1);
-    transition: 0.5s;
+  color: rgba(254, 153, 0, 1);
+  transition: 0.5s;
 }
 
 header img {
-    width: 25rem;
+  width: 100%;
+}
+
+nav {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ul {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+
+li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.bouttonPost {
+  width: 100%;
+}
+
+.btnProfil {
+  display: flex;
+  gap: 1rem;
+}
+
+.imageUser {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
