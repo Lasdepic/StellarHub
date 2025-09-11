@@ -5,7 +5,7 @@ function MyConnexion(){
     return (
         <main className='myLogin'>
         <section>
-            <img src={StellarHubWhite} alt="Logo du site" width="600" height="500" />
+            <img src={StellarHubWhite} alt="Logo du site" width="700" height="500" />
         </section>
         <section>
             <form>
