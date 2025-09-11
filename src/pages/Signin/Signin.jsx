@@ -1,21 +1,20 @@
 import StellarHubWhite from '../../assets/StellarHubWhite.png';
+import "./Signin.css"
 
 function MyConnexion(){
     return (
-        <main>
+        <main className='myLogin'>
         <section>
-            <img src={StellarHubWhite} alt="Logo du site" width="150" height="150" />
+            <img src={StellarHubWhite} alt="Logo du site" width="600" height="500" />
         </section>
         <section>
             <form>
-                <div>
+                <div className='cardsLogin'>
                     <p>Sign in</p>
                     <label htmlFor="email"></label>
-                    <input type="email" id="email" name="email" placeholder='Email' required />
-                </div>
-                <div>
+                    <input className="signin-input" type="email" id="email" name="email" placeholder='Email, phone or username' required />
                     <label htmlFor="password"></label>
-                    <input type="password" id="password" name="password" placeholder='Password' required />
+                    <input className="signin-input" type="password" id="password" name="password" placeholder='Password' required />
                 </div>
             </form>
         </section>
