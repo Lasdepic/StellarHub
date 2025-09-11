@@ -1,0 +1,52 @@
+.cards {
+    display: flex;
+    gap: 1rem;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#profilePictureCard {
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+}
+
+.cards ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+}
+
+.cards li {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cards li p {
+    font-size: 15px;
+}
+
+.cards article img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.cards ol {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+    margin-top: 1rem;
+}
+
+.cards article p {
+    margin-top: 1rem;
+    font-size: 20px;
+}
