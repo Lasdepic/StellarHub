@@ -17,6 +17,7 @@
 
 .cards ul {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
     list-style: none;
     align-items: center;
@@ -27,6 +28,10 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.contentCard {
+    width: 100%;
 }
 
 .cards li p {
@@ -42,11 +47,19 @@
 .cards ol {
     display: flex;
     list-style: none;
-    gap: 5rem;
-    margin-top: 1rem;
+    gap: 3rem;
+    margin-top: 0.5rem;
+}
+
+.cards article h2 {
+    margin-top: 0.3em;
+    margin-bottom: 0.3rem;
+}
+
+.cards article span {
+    color: #fe9900;
 }
 
 .cards article p {
-    margin-top: 1rem;
     font-size: 20px;
 }

@@ -3,12 +3,13 @@
 }
 
 .mainPage {
-    margin-left: 20vw;
+    margin-left: 20%;
     width: 60%;
 }
 
 .topPage {
     background-color: #333;
+    max-width: 840px;
     width: 60%;
     height: 5vh;
     display: flex;
@@ -23,7 +24,7 @@
     font-size: 35px;
 }
 
-.topPage button {
+.topPage a {
     margin-right: 1rem;
     border: none;
     background-color: transparent;
@@ -35,5 +36,5 @@
 
 .postsDiv {
     margin-top: 5rem;
-    height: 95vh;
+    height: 95%;
 }

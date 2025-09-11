@@ -1,15 +1,18 @@
 import Header from "../../components/Header/Header";
-import Card from "../../components/Card/Card";
+import CardData from "../../components/Card/CardData";
+import SearchBar from "../../components/SearchBar/SearchBar";
+
 import "./Home.css";
 
 function Home() {
     return (
         <>
             <Header />
+            <SearchBar />
             <section className="mainPage">
                 <div className="topPage">
                     <h2>Latest posts</h2>
-                    <button>
+                    <a>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="45px"
@@ -19,13 +22,9 @@ function Home() {
                         >
                             <path d="M120-240v-80h240v80H120Zm0-200v-80h480v80H120Zm0-200v-80h720v80H120Z" />
                         </svg>
-                    </button>
+                    </a>
                 </div>
-                <div className="postsDiv">
-                    <Card />
-                    <Card />
-                    <Card />
-                </div>
+                <CardData />
             </section>
         </>
     );
