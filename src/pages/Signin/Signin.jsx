@@ -1,4 +1,5 @@
 import StellarHubWhite from '../../assets/StellarHubWhite.png';
+import MyButton from '../../components/Button/Button';
 import "./Signin.css"
 
 function MyConnexion(){
@@ -15,6 +16,7 @@ function MyConnexion(){
                     <input className="signin-input" type="email" id="email" name="email" placeholder='Email, phone or username' required />
                     <label htmlFor="password"></label>
                     <input className="signin-input" type="password" id="password" name="password" placeholder='Password' required />
+                    <MyButton text="Connexion"/>
                 </div>
             </form>
         </section>
