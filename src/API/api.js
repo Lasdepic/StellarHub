@@ -35,10 +35,11 @@ async function login(userName, passeWord) {
   const data = await response.json();
   return data;
 }
-// async function searchUser(value){
-// fetch(`https://dummyjson.com/users/search?q=${value}`)
-// .then(res => res.json())
-// .then(console.log);
-// }
 
-export { fetchUsers, fetchPost, login, fetchPostsByUserId };
+async function searchUser(value) {
+  fetch(`https://dummyjson.com/users/search?q=${value}`)
+    .then((res) => res.json())
+    .then(console.log);
+}
+
+export { fetchUsers, fetchPost, login, searchUser };
