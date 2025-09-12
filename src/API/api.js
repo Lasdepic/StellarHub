@@ -36,10 +36,11 @@ async function login(userName, passeWord) {
     .then((res) => res.json())
     .then(console.log);
 }
-// async function searchUser(value){
-// fetch(`https://dummyjson.com/users/search?q=${value}`)
-// .then(res => res.json())
-// .then(console.log);
-// }
 
-export { fetchUsers, fetchPost, login };
+async function searchUser(value) {
+  fetch(`https://dummyjson.com/users/search?q=${value}`)
+    .then((res) => res.json())
+    .then(console.log);
+}
+
+export { fetchUsers, fetchPost, login, searchUser };
