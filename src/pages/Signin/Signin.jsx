@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import StellarHubWhite from "../../assets/StellarHubWhite.png";
 import MyButton from "../../components/Button/Button";
 import "./Signin.css";
@@ -9,6 +10,8 @@ function MyConnexion() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function loadUser() {
@@ -26,7 +29,8 @@ function MyConnexion() {
     );
     if (user) {
       setError("");
-      alert("Connexion réussie !");
+  alert("Connexion réussie !");
+  navigate("/home");
     } else {
       setError("Email ou mot de passe incorrect");
     }

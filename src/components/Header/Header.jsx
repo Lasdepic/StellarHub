@@ -1,7 +1,26 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import MyButton from "../Button/Button";
+import { useEffect, useState } from "react";
+import { fetchUsers } from "../../API/api";
 
 function Header() {
+
+const [users, setUsers] = useState([]);
+
+useEffect(()=> {
+    
+    async function picture() {
+      
+        const data = await fetchUsers();
+
+        setUsers(data.users || []);
+    }
+
+    picture();
+}, []);
+
+
     return (
         <header>
             <img src="src/assets/StellarHubWhite.png" alt="logo stellarhub" />
@@ -49,8 +68,8 @@ function Header() {
                             Bookmarks
                         </a>
                     </li>
-                    <li>
-                        <Link to="/Profile">Profile</Link>
+                    <li className="btnProfil">
+                        <img className="imageUser" src={users.image} alt="photo de l'utilisateur" /><Link to="/Profile">Profile</Link>
                     </li>
                     <li>
                         <a href="">
@@ -66,7 +85,7 @@ function Header() {
                             More
                         </a>
                     </li>
-                    <li></li>
+                    <li><MyButton className="bouttonPost" text="Post"/></li>
                 </ul>
             </nav>
         </header>
