@@ -92,7 +92,7 @@ div .stats {
   object-fit: cover; 
   display: block; 
 }
-.contentCard {
+.postsDiv .contentCard {
         width: 100%;
   height:2vh;
   object-fit: cover; 
