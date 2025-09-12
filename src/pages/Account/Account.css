@@ -1,0 +1,59 @@
+.accountStyle {
+    /* display:flex; */
+    width: 110vh;
+    height: 150vh;
+    margin-left: 35vh;
+    margin-top: 8vh;
+    border: solid rgb(105, 111, 223);
+}
+
+.image-fond {
+    align-items: center;
+    height: 30vh;
+    width: 110vh;
+    background-color: blueviolet;
+    /* margin-left: 35vh;
+    margin-top: 8vh; */
+    border: solid rgb(187, 22, 22);
+
+}
+
+.flexinfo {
+    display: flex;
+    /* background-color: aliceblue; */
+}
+
+.infoPerso {
+    width: 30vh;
+    height: 120vh;
+    border: solid white;
+    text-align: center;
+   
+    /* background-color: aliceblue; */
+}
+.infoPerso ul{
+font-size: 2vh;
+}
+
+.image-profil {
+
+    width: 25vh;
+    height: 25vh;
+    margin-left: 2vh;
+    margin-top: 1vh;
+    border: solid rgb(203, 237, 52);
+    background-color: rgb(202, 239, 115);
+
+
+}
+
+
+
+.stats ul {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100%;
+    font-size: 2vh;
+    text-align: center;
+}
