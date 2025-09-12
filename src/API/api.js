@@ -45,4 +45,4 @@ function singleUser(id) {
   return fetch(`https://dummyjson.com/users/${id}`).then((res) => res.json());
 }
 
-export { singleUser, searchUser, login, fetchUsers };
+export { singleUser, searchUser, login, fetchUsers, fetchPost };

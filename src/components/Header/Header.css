@@ -9,8 +9,8 @@ header {
   max-width: 280px;
 }
 
-li:hover,
-a:hover {
+header li:hover,
+header a:hover {
   color: rgba(254, 153, 0, 1);
   transition: 0.5s;
 }

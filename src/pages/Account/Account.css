@@ -83,7 +83,7 @@ div .stats {
     width: 75vh;
 }
 
-.cards {
+.postsDiv .cards {
       width: 100%;
   height: 100%;
   object-fit: cover; 
