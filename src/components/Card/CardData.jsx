@@ -21,14 +21,12 @@ function CardData() {
         }
         loadUsers();
     }, []);
-    console.log(users);
     return (
         <div className="postsDiv">
             {posts.map((elem) => {
                 const foundUser = users.find(
                     (element) => element.id === elem.userId
                 );
-                console.log(foundUser);
                 return (
                     <Card
                         key={elem.id}
