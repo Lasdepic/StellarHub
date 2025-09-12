@@ -69,7 +69,7 @@ useEffect(()=> {
                         </a>
                     </li>
                     <li className="btnProfil">
-                        <img className="imageUser" src={users.image} alt="photo de l'utilisateur" /><Link to="/Profile">Profile</Link>
+                        <img className="imageUser" src={users.image} alt="photo de l'utilisateur" /><Link to="/account">Profile</Link>
                     </li>
                     <li>
                         <a href="">
