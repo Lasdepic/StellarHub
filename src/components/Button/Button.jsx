@@ -1,7 +1,9 @@
-function MyButton({ className = '', text = '', ...props }) {
+function MyButton({ className = "", text = "", ...props }) {
     return (
-        <button className={className} {...props}>{text}</button>
-    )
+        <button id="btnComponents" className={className} {...props}>
+            {text}
+        </button>
+    );
 }
 
-export default MyButton
+export default MyButton;
