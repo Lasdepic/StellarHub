@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import StellarHubWhite from "../../assets/StellarHubWhite.png";
 import MyButton from "../../components/Button/Button";
 import "./Signin.css";
-import { fetchUsers } from "../../API/api";
+import { fetchUsers, users } from "../../API/api";
+import { chargerDonnees, saveUsers } from "../../LocalStorage/localStorage.js";
 
 function MyConnexion() {
   const [utilisateurs, setUtilisateurs] = useState([]);
@@ -29,8 +30,8 @@ function MyConnexion() {
     );
     if (user) {
       setError("");
-  alert("Connexion réussie !");
-  navigate("/home");
+      saveUsers([user]);
+      navigate("/");
     } else {
       setError("Email ou mot de passe incorrect");
     }
