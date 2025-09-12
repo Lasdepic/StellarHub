@@ -1,4 +1,4 @@
-import { fetchUsers } from "../../API/api";
+import { fetchUsers, fetchPost } from "../../API/api";
 import { useState, useEffect } from "react";
 import Card from "./Card";
 
