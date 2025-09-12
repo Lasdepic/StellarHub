@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Signin from "./pages/Signin/Signin";
 import Account from "./pages/Account/Account";
+import Post from "./pages/Post/Post";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/signin" element={<Signin />} />
                     <Route path="/account" element={<Account/>}/>
+                   <Route path="/post" element={<Post />}/> 
                 </Routes>
             </BrowserRouter>
         </>
