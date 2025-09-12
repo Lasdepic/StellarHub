@@ -41,10 +41,8 @@ async function searchUser(value) {
     .then(console.log);
 }
 
-function singleUser() {
-  fetch("https://dummyjson.com/users/1")
-    .then((res) => res.json())
-    .then(console.log);
+function singleUser(id) {
+  return fetch(`https://dummyjson.com/users/${id}`).then((res) => res.json());
 }
 
 export { singleUser, searchUser, login, fetchUsers };
