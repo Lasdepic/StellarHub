@@ -1,84 +1,107 @@
 import "./Account.css";
+
 import Header from "../../components/Header/Header";
-// import Home from "../Home/Home";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import CardData from "../../components/Card/CardData";
+import { useEffect, useState } from "react";
+import { singleUser } from "../../API/api";
 
 export default function Account() {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Récupérer l'id de l'utilisateur connecté depuis le localStorage (après login)
+    const userData = localStorage.getItem("user");
+    if (userData) {
+      const userObj = JSON.parse(userData);
+      const userId = userObj.id;
+      singleUser(userId).then((data) => {
+        setUser(data);
+        setLoading(false);
+      });
+    } else {
+      setLoading(false);
+    }
+  }, []);
+
+  if (loading) {
+    return <div>Chargement du profil...</div>;
+  }
+
+  if (!user) {
+    return <div>Utilisateur non connecté.</div>;
+  }
+
   return (
     <>
       <Header />
-
       <main className="accountStyle">
         <div className="image-fond">
           <img
-            src="https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-6/475033021_921559946629502_6359739391899699344_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Qvky4Ed6-AgQ7kNvwF-L3xC&_nc_oc=AdnXTFj7YPcx6ryetEvsf7QUZAE2UckiLPgVDeTuL9E9Gp4Q5WfkGG11vUJtFOrGBeA&_nc_zt=23&_nc_ht=scontent-cdg4-1.xx&_nc_gid=_E9Hk8rTCXxvl9rS9m02wQ&oh=00_AfZoMw-4GhyRk2AckRgpCMod8Y97xyr0Qws5v50GjfFwJQ&oe=68C9C74C"
+            src={
+              user.image ||
+              "https://via.placeholder.com/300x100?text=Image+de+fond"
+            }
             alt="image de fond"
           />
         </div>
-
         <section className="flexinfo">
           <div className="infoPerso">
             <div className="image-profil">
               <img
-                src="https://pbs.twimg.com/media/F0c0sY5WYAIKyPz.jpg"
+                src={
+                  user.image || "https://via.placeholder.com/100?text=Profil"
+                }
                 alt="image-profil"
               />
             </div>
             <ul>
               <li>
-                <p>わおくす</p>
-                <p>@deafiaa</p>
-                <br />
                 <p>
-                  Lorem ipsum feur coubeh coubeh feur na coubite voubeh tete
-                  retricoter UwU
+                  {user.firstName} {user.lastName}
                 </p>
+                <p>@{user.username}</p>
+                <br />
+                <p>{user.bio || user.email}</p>
               </li>
               <li>
-                <p>Los Angeles, CA</p>
-                <p>notion.tututfdp/31967.gouv.ru</p>
-                <p>Joined August 2015</p>
+                <p>
+                  {user.address?.city}, {user.address?.state}
+                </p>
+                <p>{user.email}</p>
+                <p>Age: {user.age}</p>
               </li>
             </ul>
             <div></div>
           </div>
-
           <div className="stats">
             <ul>
               <li>
                 <p>POSTS</p>
-
-                <p>2.416</p>
+                <p>{user.posts?.length || 0}</p>
               </li>
               <li>
                 <p>FOLLOWING</p>
-
-                <p>243</p>
+                <p>{user.following || 0}</p>
               </li>
               <li>
                 <p>FOLLOWERS</p>
-
-                <p>423M</p>
+                <p>{user.followers || 0}</p>
               </li>
               <li>
                 <p>FAVORITES</p>
-
-                <p>136</p>
+                <p>{user.favorites || 0}</p>
               </li>
               <li>
                 <button className="bouttonFollow">+Follow</button>
               </li>
             </ul>
-             <CardData />
-          </div> 
-          
+            <CardData />
+          </div>
         </section>
-      
       </main>
-
       <SearchBar />
-      {/* <Home /> */}
     </>
   );
 }

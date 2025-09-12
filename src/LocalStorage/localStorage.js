@@ -1,8 +1,7 @@
-export function saveUsers(id) {
-  chargerDonnees();
-  localStorage.setItem("userId", JSON.stringify(id));
+export function saveUsers(user) {
+  localStorage.setItem("user", JSON.stringify(user));
 }
 
 export function chargerDonnees() {
-  return JSON.parse(localStorage.getItem("userId")) || [];
+  return JSON.parse(localStorage.getItem("user")) || null;
 }
