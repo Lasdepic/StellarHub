@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import StellarHubWhite from "../../assets/StellarHubWhite.png";
 import MyButton from "../../components/Button/Button";
 import "./Signin.css";
-import { fetchUsers, login, users } from "../../API/api";
+import { fetchUsers, login } from "../../API/api";
 import { chargerDonnees, saveUsers } from "../../LocalStorage/localStorage.js";
 
 function MyConnexion() {
@@ -25,8 +25,9 @@ function MyConnexion() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login();
-    if (login) {
+    const user = login(email, password);
+    console.log(user);
+    if (user) {
       setError("");
       saveUsers([user]);
       navigate("/");
