@@ -11,29 +11,27 @@ main {
     /* border: solid rgb(105, 111, 223); */
 }
 
-.image-fond {
+.accountStyle .image-fond {
     align-items: center;
     height: 30vh;
     width: 105vh;
     /* background-color: blueviolet; */
     /* border: solid rgb(187, 22, 22); */
-
 }
 
-.image-fond img {
+.accountStyle .image-fond img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-
 }
 
-.flexinfo {
+.accountStyle .flexinfo {
     display: flex;
     /* background-color: aliceblue; */
 }
 
-.infoPerso {
+.accountStyle .infoPerso {
     width: 30vh;
     height: 120vh;
     /* border: solid white; */
@@ -42,13 +40,11 @@ main {
     /* background-color: aliceblue; */
 }
 
-.infoPerso ul {
+.accountStyle .infoPerso ul {
     font-size: 2vh;
-
 }
 
-.image-profil {
-
+.accountStyle .image-profil {
     width: 25vh;
     height: 25vh;
     margin-left: 2vh;
@@ -56,19 +52,16 @@ main {
     border-radius: 10%;
     /* border: solid rgb(203, 237, 52); */
     background-color: rgb(202, 239, 115);
-
-
 }
 
-.image-profil img {
+.accountStyle .image-profil img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-
-.stats ul {
+.accountStyle .stats ul {
     display: flex;
     flex-direction: row;
     height: 7vh;
@@ -77,36 +70,30 @@ main {
     margin-top: 1vh;
     text-align: center;
     /* border: solid rgb(203, 237, 52); */
-    
 }
 
-
-div .stats {
+.accountStyle div .stats {
     width: 75vh;
-    
 }
 
-.postsDiv .cards {
-      width: 100%;
-  height: 130vh;
-  object-fit: cover; 
-  display: block; 
+.accountStyle .cards {
+    width: 100%;
+    height: 130vh;
+    object-fit: cover;
+    display: block;
 }
-.postsDiv .contentCard {
-        width: 100%;
-  height:2vh;
-  object-fit: cover; 
-  display: block; 
+.accountStyle .contentCard {
+    width: 100%;
+    height: 2vh;
+    object-fit: cover;
+    display: block;
 }
 
-.bouttonFollow{
-    width:11vh;
+.accountStyle .bouttonFollow {
+    width: 11vh;
     height: 5vh;
 }
 
 /* ol{
     margin-bottom: 1vh;
 } */
-
-
-
