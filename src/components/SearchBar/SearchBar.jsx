@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { searchUser } from "../../API/api";
 import "./SearchBar.css";
 
-function SearchBar(props) {
+function SearchBar() {
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
 

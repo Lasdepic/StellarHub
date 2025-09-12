@@ -1,0 +1,40 @@
+.cardNotFound {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.logoStellarHub {
+  width: 500px;
+  height: 300px;
+}
+
+.divNotFound {
+  display: flex;
+  height: 20%;
+  align-items: center;
+}
+
+.titre404 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.text404 {
+  font-size: 2rem;
+}
+
+.lienRetourAccueuil {
+  font-size: 3rem;
+  text-decoration: none;
+  color: rgba(254, 153, 0, 1);
+}
+
+.lienRetourAccueuil:hover {
+  text-decoration: underline;
+  transition: 0.5s;
+}
