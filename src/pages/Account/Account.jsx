@@ -79,7 +79,7 @@ export default function Account() {
             <ul>
               <li>
                 <p>POSTS</p>
-                <p>{user.posts?.length || 0}</p>
+                <p></p>
               </li>
               <li>
                 <p>FOLLOWING</p>
