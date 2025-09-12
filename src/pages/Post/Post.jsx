@@ -21,7 +21,13 @@ function Post() {
                         likes="84545"
                         views="482"
                     />
-                    <Comment />
+                    <div className="commentDiv">
+                        <Comment />
+                        <Comment />
+                        <Comment />
+                        <Comment />
+                        <Comment />
+                    </div>
                     
             </section>
         </>

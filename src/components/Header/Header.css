@@ -9,8 +9,8 @@ header {
   max-width: 280px;
 }
 
-li:hover,
-a:hover {
+header li:hover,
+header a:hover {
   color: rgba(254, 153, 0, 1);
   transition: 0.5s;
 }
@@ -19,14 +19,14 @@ header img {
   width: 100%;
 }
 
-nav {
+header nav {
   width: 70%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-ul {
+header ul {
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ ul {
   list-style: none;
 }
 
-li a {
+header li a {
   display: flex;
   align-items: center;
   gap: 1rem;
