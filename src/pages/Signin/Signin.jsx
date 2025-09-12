@@ -29,7 +29,7 @@ function MyConnexion() {
     const user = await login(username, password);
     if (user && !user.message) {
       setError("");
-      saveUsers(user); // On stocke tout l'objet utilisateur
+      saveUsers(user);
       navigate("/account");
     } else {
       setError("Nom d'utilisateur ou mot de passe incorrect");

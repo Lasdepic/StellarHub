@@ -83,15 +83,15 @@ export default function Account() {
               </li>
               <li>
                 <p>FOLLOWING</p>
-                <p>{user.following || 0}</p>
+                <p></p>
               </li>
               <li>
                 <p>FOLLOWERS</p>
-                <p>{user.followers || 0}</p>
+                <p></p>
               </li>
               <li>
                 <p>FAVORITES</p>
-                <p>{user.favorites || 0}</p>
+                <p></p>
               </li>
               <li>
                 <button className="bouttonFollow">+Follow</button>
