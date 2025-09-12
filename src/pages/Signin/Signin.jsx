@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import StellarHubWhite from "../../assets/StellarHubWhite.png";
 import MyButton from "../../components/Button/Button";
 import "./Signin.css";
-import { fetchUsers, users } from "../../API/api";
+import { fetchUsers, login, users } from "../../API/api";
 import { chargerDonnees, saveUsers } from "../../LocalStorage/localStorage.js";
 
 function MyConnexion() {
@@ -14,21 +14,19 @@ function MyConnexion() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    async function loadUser() {
-      const data = await fetchUsers();
+  // useEffect(() => {
+  //   async function loadUser() {
+  //     const data = await fetchUsers();
 
-      setUtilisateurs(data.users || []);
-    }
-    loadUser();
-  }, []);
+  //     setUtilisateurs(data.users || []);
+  //   }
+  //   loadUser();
+  // }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const user = utilisateurs.find(
-      (u) => u.email === email && u.password === password
-    );
-    if (user) {
+    login();
+    if (login) {
       setError("");
       saveUsers([user]);
       navigate("/");
