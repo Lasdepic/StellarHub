@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import Signin from "./pages/Signin/Signin";
 import Account from "./pages/Account/Account";
 import Post from "./pages/Post/Post";
+import NotFound from "./pages/error 404/NotFound";
+
 
 function App() {
     return (
@@ -15,6 +17,7 @@ function App() {
                     <Route path="/signin" element={<Signin />} />
                     <Route path="/account" element={<Account/>}/>
                    <Route path="/post" element={<Post />}/> 
+                   <Route path="*" element={<NotFound/>}/>
                 </Routes>
             </BrowserRouter>
         </>
