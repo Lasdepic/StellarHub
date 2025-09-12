@@ -4,35 +4,35 @@ import StellarHubWhite from "../../assets/StellarHubWhite.png";
 import MyButton from "../../components/Button/Button";
 import "./Signin.css";
 import { fetchUsers, login } from "../../API/api";
-import { chargerDonnees, saveUsers } from "../../LocalStorage/localStorage.js";
+import { saveUsers } from "../../LocalStorage/localStorage.js";
 
+// login("emilys", "emilyspass");
 function MyConnexion() {
   const [utilisateurs, setUtilisateurs] = useState([]);
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   async function loadUser() {
-  //     const data = await fetchUsers();
+  useEffect(() => {
+    async function loadUser() {
+      const data = await fetchUsers();
 
-  //     setUtilisateurs(data.users || []);
-  //   }
-  //   loadUser();
-  // }, []);
+      setUtilisateurs(data.users || []);
+    }
+    loadUser();
+  }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = login(email, password);
-    console.log(user);
-    if (user) {
+    const user = await login(username, password);
+    if (user && !user.message) {
       setError("");
-      saveUsers([user]);
+      saveUsers({ id: user.id, nom: user.firstName });
       navigate("/");
     } else {
-      setError("Email ou mot de passe incorrect");
+      setError("Nom d'utilisateur ou mot de passe incorrect");
     }
   };
 
@@ -51,16 +51,16 @@ function MyConnexion() {
           <div className="cardsLogin">
             <p>Sign in</p>
             {error && <p style={{ color: "red" }}>{error}</p>}
-            <label htmlFor="email"></label>
+            <label htmlFor="username"></label>
             <input
               className="signin-input"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email, phone or username"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Nom d'utilisateur"
               required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <label htmlFor="password"></label>
             <input

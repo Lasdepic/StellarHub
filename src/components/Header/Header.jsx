@@ -59,7 +59,7 @@ function Header() {
               src={user.image}
               alt="photo de l'utilisateur"
             />
-            <Link to="/Profile">Profile</Link>
+            <Link to="/account">Profile</Link>
           </li>
           <li>
             <a href="">

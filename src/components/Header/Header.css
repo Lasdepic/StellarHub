@@ -1,58 +1,58 @@
 header {
-    height: 100vh;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    max-width: 280px;
+  height: 100vh;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  max-width: 280px;
 }
 
 li:hover,
 a:hover {
-    color: rgba(254, 153, 0, 1);
-    transition: 0.5s;
+  color: rgba(254, 153, 0, 1);
+  transition: 0.5s;
 }
 
 header img {
-    width: 100%;
+  width: 100%;
 }
 
 nav {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 ul {
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
 }
 
 li a {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: #fff;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 .bouttonPost {
-    width: 100%;
+  width: 100%;
 }
 
 .btnProfil {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .imageUser {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
