@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import StellarHubWhite from "../../assets/StellarHubWhite.png";
 import MyButton from "../../components/Button/Button";
 import "./Signin.css";
-import { fetchPostsByUserId, fetchUsers, login } from "../../API/api";
-import { chargerDonnees, saveUsers } from "../../LocalStorage/localStorage.js";
+import { fetchUsers, login } from "../../API/api";
+import { saveUsers } from "../../LocalStorage/localStorage.js";
 
 // login("emilys", "emilyspass");
 function MyConnexion() {
@@ -29,7 +29,7 @@ function MyConnexion() {
     const user = await login(username, password);
     if (user && !user.message) {
       setError("");
-      saveUsers([user]);
+      saveUsers({ id: user.id, nom: user.firstName });
       navigate("/");
     } else {
       setError("Nom d'utilisateur ou mot de passe incorrect");
