@@ -1,20 +1,30 @@
+main {
+    margin: 0 auto;
+}
+
 .accountStyle {
     /* display:flex; */
-    width: 110vh;
-    height: 150vh;
-    margin-left: 35vh;
+    width: 105vh;
+    height: 400vh;
+    margin-left: 36vh;
     margin-top: 8vh;
-    border: solid rgb(105, 111, 223);
+    /* border: solid rgb(105, 111, 223); */
 }
 
 .image-fond {
     align-items: center;
     height: 30vh;
-    width: 110vh;
-    background-color: blueviolet;
-    /* margin-left: 35vh;
-    margin-top: 8vh; */
-    border: solid rgb(187, 22, 22);
+    width: 105vh;
+    /* background-color: blueviolet; */
+    /* border: solid rgb(187, 22, 22); */
+
+}
+
+.image-fond img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 
 }
 
@@ -26,13 +36,15 @@
 .infoPerso {
     width: 30vh;
     height: 120vh;
-    border: solid white;
+    /* border: solid white; */
     text-align: center;
-   
+
     /* background-color: aliceblue; */
 }
-.infoPerso ul{
-font-size: 2vh;
+
+.infoPerso ul {
+    font-size: 2vh;
+
 }
 
 .image-profil {
@@ -41,19 +53,39 @@ font-size: 2vh;
     height: 25vh;
     margin-left: 2vh;
     margin-top: 1vh;
-    border: solid rgb(203, 237, 52);
+    border-radius: 10%;
+    /* border: solid rgb(203, 237, 52); */
     background-color: rgb(202, 239, 115);
 
 
 }
 
+.image-profil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 
 .stats ul {
     display: flex;
     flex-direction: row;
     height: 10vh;
-    width: 100%;
+    width: 77vh;
     font-size: 2vh;
     text-align: center;
+    /* border: solid rgb(203, 237, 52); */
+    background-color: ;
+}
+
+div .stats {
+    width: 75vh;
+}
+
+.cards {
+      width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block; 
 }
