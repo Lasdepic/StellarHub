@@ -40,7 +40,7 @@ function SearchBar(props) {
         {results.map((user) => (
           <li key={user.id}>
             <a href={"/account/" + user.id}>
-              {user.firstName} {user.lastName}
+              {user.image} {user.firstName} {user.lastName}
             </a>
           </li>
         ))}
