@@ -67,7 +67,7 @@ export default function Account() {
                 <p>136</p>
               </li>
               <li>
-                <button className="+follow">+ Follow</button>
+                <button className="bouttonFollow">+Follow</button>
               </li>
             </ul>
              <CardData />
