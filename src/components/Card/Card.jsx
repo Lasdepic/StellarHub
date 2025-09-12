@@ -1,29 +1,26 @@
 import "./Card.css";
 
-function Card() {
+function Card(props) {
+    const randomId = Math.floor(Math.random() * 1000);
+    const imageUrl = `https://picsum.photos/400/300?random=${randomId}`;
+
     return (
         <div className="cards">
-            <img
-                id="profilePictureCard"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRmNEnTZWdDdW_DYprIk0H4puyZYx8I6FG5g&s"
-                alt=""
-            />
-            <div>
+            <img id="profilePictureCard" src={props.image} alt="" />
+            <div className="contentCard">
                 <ul>
-                    <li>わおくす</li>
+                    <li>{props.userFirstName}</li>
                     <li>
-                        <p>@deafiaa • 1m ago</p>
+                        <p>@{props.userName} • 1m ago</p>
                     </li>
                 </ul>
                 <article>
+                    <h2>{props.title}</h2>
                     <p>
-                        contenue de la magnifique card qui est ecrite par nos
-                        merveilleux utilisateur TwT
+                        {props.body}
+                        <span> #{props.tags}</span>
                     </p>
-                    <img
-                        src="https://wallpapers.com/images/hd/cute-sanrio-1kne0am39hwzcjdd.jpg"
-                        alt=""
-                    />
+                    <img src={imageUrl} alt="" />
                 </article>
                 <ol>
                     <li>
@@ -50,7 +47,7 @@ function Card() {
                         </svg>
                     </li>
                     <li>
-                        <p>25</p>
+                        <p>{props.likes}</p>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="3rem"
@@ -62,7 +59,7 @@ function Card() {
                         </svg>
                     </li>
                     <li>
-                        <p>254</p>
+                        <p>{props.views}</p>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="3rem"
