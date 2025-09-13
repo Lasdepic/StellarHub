@@ -60,3 +60,7 @@ header li a {
     height: 35px;
     border-radius: 50%;
 }
+
+.bouttonDeconnexion {
+  width: 100% !important;
+}
