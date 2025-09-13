@@ -38,14 +38,18 @@
     min-width: 200px;
     max-width: 300px;
     height: auto;
-    /* border: solid white; */
+    /* border:solid white; */
     text-align: center;
 
     /* align-items: center; */
     /* background-color: aliceblue; */
 }
 
-.accountStyle .textInfo {}
+.accountStyle section .textInfo{
+
+    align-items: center;
+}
+
 
 .accountStyle .infoPerso ul {
     margin-top: 5rem;
@@ -56,7 +60,6 @@
     list-style-type: none;
 
 }
-
 
 
 .accountStyle .image-profil {

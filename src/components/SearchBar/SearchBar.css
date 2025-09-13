@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  width: 100%;
+  width: 90%;
   margin-top: 20%;
 }
 
@@ -65,5 +65,8 @@ input {
   border: 1.5px solid #232323;
   flex-shrink: 0;
 }
+
+/*------------------------------------------------*/
+
 
 
