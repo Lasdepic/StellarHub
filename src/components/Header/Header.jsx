@@ -6,8 +6,6 @@ import { chargerDonnees } from "../../LocalStorage/localStorage.js";
 function Header() {
     const user = chargerDonnees();
 
-  const user = chargerDonnees();
-
 const redirection = useNavigate();
 const deconnexion = () => {
   localStorage.removeItem("user");
