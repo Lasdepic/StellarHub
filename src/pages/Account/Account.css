@@ -1,4 +1,4 @@
-main {
+.accountStyle main {
     margin: 0 auto;
     max-width: 100vw;
     max-height: 100vh;
@@ -38,16 +38,14 @@ main {
     min-width: 200px;
     max-width: 300px;
     height: auto;
-    border: solid white;
+    /* border: solid white; */
     text-align: center;
-    
+
     /* align-items: center; */
     /* background-color: aliceblue; */
 }
 
-.accountStyle .infoPerso {
-    
-}
+.accountStyle .textInfo {}
 
 .accountStyle .infoPerso ul {
     margin-top: 5rem;
@@ -56,7 +54,10 @@ main {
     display: flex;
     flex-direction: column;
     list-style-type: none;
+
 }
+
+
 
 .accountStyle .image-profil {
     width: 12vw;
@@ -105,6 +106,7 @@ main {
     object-fit: cover;
     display: block;
 }
+
 .accountStyle .contentCard {
     width: 100%;
     height: auto;
@@ -129,26 +131,26 @@ main {
         padding: 0 1rem;
     }
 
-   
+
     .accountStyle .image-fond {
         height: 18vh;
     }
 
-  
+
     .accountStyle .flexinfo {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
 
-    
+
     .accountStyle .infoPerso {
         width: 60%;
         max-width: 400px;
         text-align: center;
     }
 
-   
+
     .accountStyle .image-profil {
         position: static;
         margin: 1rem auto;
@@ -158,7 +160,7 @@ main {
         max-height: 140px;
     }
 
-   
+
     .accountStyle .infoPerso ul {
         margin-top: 2rem;
         width: 100%;
@@ -166,7 +168,7 @@ main {
         padding: 0;
     }
 
-    
+
     .accountStyle .stats ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -174,7 +176,7 @@ main {
         font-size: 15px;
     }
 
-   
+
     .accountStyle .bouttonFollow {
         width: 30%;
         min-width: 100px;
@@ -190,24 +192,24 @@ main {
         padding: 0 1rem;
     }
 
-   
+
     .accountStyle .image-fond {
         height: 15vh;
     }
 
-   
+
     .accountStyle .flexinfo {
         flex-direction: column;
         align-items: center;
     }
 
-   
+
     .accountStyle .infoPerso {
         width: 100%;
         text-align: center;
     }
 
-   
+
     .accountStyle .image-profil {
         position: static;
         margin: 1rem auto;
@@ -217,7 +219,7 @@ main {
         max-height: 100px;
     }
 
-   
+
     .accountStyle .infoPerso ul {
         margin-top: 1rem;
         width: 100%;
@@ -225,7 +227,7 @@ main {
         padding: 0;
     }
 
-   
+
     .accountStyle .stats ul {
         flex-direction: column;
         gap: 0.5rem;
@@ -233,7 +235,7 @@ main {
         padding: 0;
     }
 
-    
+
     .accountStyle .bouttonFollow {
         width: 60%;
         min-width: unset;
