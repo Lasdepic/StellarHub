@@ -1,4 +1,4 @@
-import { fetchPost, fetchUsers } from "../../API/api";
+import { fetchUsers, fetchPost } from "../../API/api";
 import { useState, useEffect } from "react";
 import Card from "./Card";
 
@@ -21,14 +21,12 @@ function CardData() {
         }
         loadUsers();
     }, []);
-    console.log(users);
     return (
         <div className="postsDiv">
             {posts.map((elem) => {
                 const foundUser = users.find(
                     (element) => element.id === elem.userId
                 );
-                console.log(foundUser);
                 return (
                     <Card
                         key={elem.id}
@@ -44,8 +42,11 @@ function CardData() {
                         title={elem.title}
                         body={elem.body}
                         tags={elem.tags}
+                        inactiveLiked={""}
+                        activeLiked={"none"}
                         likes={elem.reactions.likes}
                         views={elem.views}
+                        postId={elem.id}
                     />
                 );
             })}

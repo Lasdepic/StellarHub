@@ -1,0 +1,11 @@
+.postPage {
+    margin-left: 20%;
+    width: 60%;
+}
+
+.commentDiv {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

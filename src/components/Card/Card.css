@@ -1,10 +1,11 @@
 .cards {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
     width: 95%;
     margin: 0 auto;
     margin-top: 1rem;
-    background-color: #333;
+    background-color: #171717;
     padding: 1rem;
     border-radius: 10px;
 }
@@ -13,6 +14,10 @@
     border-radius: 50%;
     height: 5rem;
     width: 5rem;
+}
+
+.card img {
+    width: 10%;
 }
 
 .cards ul {
@@ -30,8 +35,23 @@
     gap: 0.5rem;
 }
 
+.cards a {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#btnLike:hover {
+    fill: rgb(226, 115, 238);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
 .contentCard {
-    width: 100%;
+    width: 90%;
 }
 
 .cards li p {

@@ -5,14 +5,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body, html, #root {
+body,
+html,
+#root {
     height: 100%;
     background: #232323;
 }
 
 .myLogin {
-    min-height: 100vh;
-    width: 100vw;
+    min-height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,7 +91,8 @@ form {
     gap: 0.5rem;
 }
 
-button, .signin-btn {
+#btnComponents,
+.signin-btn {
     width: 60%;
     margin: 0 auto;
     padding: 0.7rem 0;
@@ -103,6 +106,7 @@ button, .signin-btn {
     transition: background 0.2s;
     display: block;
 }
-button:hover, .signin-btn:hover {
+button:hover,
+.signin-btn:hover {
     background: #e68900;
 }
