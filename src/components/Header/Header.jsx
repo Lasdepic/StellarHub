@@ -1,10 +1,10 @@
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 import MyButton from "../Button/Button";
-import { useEffect, useState } from "react";
 import { chargerDonnees } from "../../LocalStorage/localStorage.js";
 
 function Header() {
+
   const user = chargerDonnees();
 
 const redirection = useNavigate();
@@ -62,11 +62,13 @@ const deconnexion = () => {
             </a>
           </li>
           <li className="btnProfil">
+
             <img
-              className="imageUser"
-              src={user.image}
-              alt="photo de l'utilisateur"
+                src="../src/assets/tinyStellarHubWhite.png"
+                alt="logo stellarhub"
+                id="mainLogo"
             />
+
             <Link to="/account">Profile</Link>
           </li>
           <li>
@@ -91,6 +93,7 @@ const deconnexion = () => {
       </nav>
     </header>
   );
+
 }
 
 export default Header;
