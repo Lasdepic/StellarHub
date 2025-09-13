@@ -40,7 +40,12 @@ function SearchBar() {
                 {results.map((user) => (
                     <li key={user.id}>
                         <a href={"/account/" + user.id}>
-                            {user.image} {user.firstName} {user.lastName}
+                            <img
+                                src={user.image}
+                                alt={`${user.firstName} ${user.lastName}`}
+                                className="user-avatar"
+                            />
+                            {user.firstName} {user.lastName}
                         </a>
                     </li>
                 ))}
