@@ -14,6 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/signin" element={<Signin />} />
+                    <Route path="/account/" element={<Account />} />
                     <Route path="/account/:id" element={<Account />} />
                     <Route path="/post/:postId" element={<Post />} />
                     <Route path="*" element={<NotFound />} />
