@@ -63,12 +63,6 @@ const deconnexion = () => {
           </li>
           <li className="btnProfil">
 
-            <img
-                src="../src/assets/tinyStellarHubWhite.png"
-                alt="logo stellarhub"
-                id="mainLogo"
-            />
-
             <Link to="/account">Profile</Link>
           </li>
           <li>
