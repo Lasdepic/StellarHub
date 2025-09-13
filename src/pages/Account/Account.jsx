@@ -78,7 +78,7 @@ export default function Account() {
                                 <p>Age: {user.age}</p>
                             </li>
                         </ul>
-                        <div></div>
+                        
                     </div>
                     <div className="stats">
                         <ul>
@@ -98,13 +98,16 @@ export default function Account() {
                                 <p>FAVORITES</p>
                                 <p>{(randomId / 4).toFixed(0)}</p>
                             </li>
-                            <li></li>
+                            <li>
+
+                            </li>
                         </ul>
                         <CardData />
                     </div>
                 </section>
+                 <SearchBar />
             </main>
-            <SearchBar />
+           
         </>
     );
 }
