@@ -4,11 +4,15 @@ import Card from "../../components/Card/Card";
 import Comment from "../../components/Comment/Comment";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { fetchUsers, fetchCommentsByPostId } from "../../API/api";
 import "./Post.css";
 
 function Post() {
     const { postId } = useParams();
     const [post, setPost] = useState(null);
+    const [user, setUser] = useState(null);
+    const [comment, setComment] = useState([]);
+
     console.log(postId);
     useEffect(() => {
         fetch(`https://dummyjson.com/posts/${postId}`)
@@ -18,6 +22,23 @@ function Post() {
                 setPost(data);
             });
     }, [postId]);
+
+    useEffect(() => {
+        async function loadUser() {
+            const userData = await fetchUsers();
+            setUser(userData);
+        }
+        loadUser();
+    }, []);
+
+    useEffect(() => {
+        if (!post) return;
+        async function loadComment() {
+            const data = await fetchCommentsByPostId(post.id);
+            setComment(data.comments);
+        }
+        loadComment();
+    }, [post]);
 
     return (
         <>
@@ -38,11 +59,17 @@ function Post() {
                     />
                 )}
                 <div className="commentDiv">
-                    <Comment />
-                    <Comment />
-                    <Comment />
-                    <Comment />
-                    <Comment />
+                    {comment.map((elem) => {
+                        return (
+                            <Comment
+                                key={elem.id}
+                                username={elem.user.username}
+                                fullName={elem.user.fullName}
+                                likes={elem.likes}
+                                body={elem.body}
+                            />
+                        );
+                    })}
                 </div>
             </section>
         </>

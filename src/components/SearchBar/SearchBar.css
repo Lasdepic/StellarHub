@@ -13,7 +13,6 @@
 .containerSearch {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   width: 90%;
   margin-top: 20%;
@@ -66,7 +65,9 @@ input {
   flex-shrink: 0;
 }
 
+
 /*------------------------------------------------*/
+
 
 
 
