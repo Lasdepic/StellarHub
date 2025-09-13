@@ -63,7 +63,7 @@ const deconnexion = () => {
           </li>
           <li className="btnProfil">
             <img className="imageUser" src={user?.image} alt="photo de l'utilisateur" />
-            <Link to="/Profile">Profile</Link>
+            <Link to="/Account">Profile</Link>
           </li>
           <li>
             <a href="">
