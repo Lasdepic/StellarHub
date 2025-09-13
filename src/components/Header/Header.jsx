@@ -1,11 +1,19 @@
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MyButton from "../Button/Button";
 import { useEffect, useState } from "react";
 import { chargerDonnees } from "../../LocalStorage/localStorage.js";
 
 function Header() {
   const user = chargerDonnees();
+
+const redirection = useNavigate();
+const deconnexion = () => {
+  localStorage.removeItem("user");
+  redirection("/Signin")
+};
+
+
   return (
     <header>
       <img src="src/assets/StellarHubWhite.png" alt="logo stellarhub" />
@@ -78,6 +86,7 @@ function Header() {
           <li>
             <MyButton className="bouttonPost" text="Post" />
           </li>
+          <li><MyButton className="bouttonDeconnexion" text="déconnexion" onClick={()=> deconnexion()} /></li>
         </ul>
       </nav>
     </header>
