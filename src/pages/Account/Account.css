@@ -1,105 +1,115 @@
 main {
-  margin: 0 auto;
-  max-width: 100vw;
-  max-height: 100vh;
-  overflow: hidden;
+    margin: 0 auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .accountStyle {
-  width: 60%;
-  margin-left: 20%;
-  min-height: 80vh;
-  overflow: hidden;
-  /* border: solid rgb(105, 111, 223); */
+    width: 60%;
+    margin-left: 20%;
+    min-height: 80vh;
+    overflow: hidden;
+    /* border: solid rgb(105, 111, 223); */
 }
 
 .accountStyle .image-fond {
-  align-items: center;
-  height: 20vh;
-  width: 100%;
-  /* background-color: blueviolet; */
-  /* border: solid rgb(187, 22, 22); */
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    /* background-color: blueviolet; */
+    /* border: solid rgb(187, 22, 22); */
 }
 
 .accountStyle .image-fond img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .accountStyle .flexinfo {
-  display: flex;
-  /* background-color: aliceblue; */
+    display: flex;
+    /* background-color: aliceblue; */
 }
 
 .accountStyle .infoPerso {
-  width: 25vw;
-  min-width: 200px;
-  max-width: 300px;
-  height: auto;
-  /* border: solid white; */
-  text-align: center;
-  /* background-color: aliceblue; */
+    width: 25vw;
+    min-width: 200px;
+    max-width: 300px;
+    height: auto;
+    /* border: solid white; */
+    text-align: center;
+    /* background-color: aliceblue; */
 }
 
 .accountStyle .infoPerso ul {
-  font-size: 2vh;
+    margin-top: 5rem;
+    width: 20%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .accountStyle .image-profil {
-  width: 12vw;
-  height: 12vw;
-  max-width: 120px;
-  max-height: 120px;
-  min-width: 80px;
-  min-height: 80px;
-  margin: 1vh auto;
-  border-radius: 10%;
-  /* border: solid rgb(203, 237, 52); */
-  background-color: rgb(202, 239, 115);
+    width: 12vw;
+    height: 12vw;
+    max-width: 120px;
+    max-height: 120px;
+    min-width: 80px;
+    min-height: 80px;
+    margin: 1vh auto;
+    border-radius: 10%;
+    position: absolute;
+    top: 13rem;
+    left: 20rem;
+    /* border: solid rgb(203, 237, 52); */
+    background-color: rgb(202, 239, 115);
 }
 
 .accountStyle .image-profil img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .accountStyle .stats ul {
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  width: 100%;
-  font-size: 2vh;
-  margin-top: 1vh;
-  text-align: center;
-  /* border: solid rgb(203, 237, 52); */
+    background-color: #171717;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    height: auto;
+    width: 100%;
+    font-size: 15px;
+    list-style: none;
+    text-align: center;
+    /* border: solid rgb(203, 237, 52); */
 }
 
 .accountStyle div .stats {
-  width: 100%;
+    width: 100%;
 }
 
 .accountStyle .cards {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
 .accountStyle .contentCard {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
 
 .accountStyle .bouttonFollow {
-  width: 8vw;
-  min-width: 80px;
-  height: 4vh;
-  min-height: 32px;
+    width: 8vw;
+    min-width: 80px;
+    height: 4vh;
+    min-height: 32px;
 }
 
 /* ol{
