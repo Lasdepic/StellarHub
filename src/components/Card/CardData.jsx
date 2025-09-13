@@ -46,6 +46,7 @@ function CardData() {
                         activeLiked={"none"}
                         likes={elem.reactions.likes}
                         views={elem.views}
+                        postId={elem.id}
                     />
                 );
             })}
