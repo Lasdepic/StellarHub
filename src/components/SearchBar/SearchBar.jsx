@@ -39,7 +39,7 @@ function SearchBar() {
       <ul className="search-results">
         {results.map((user) => (
           <li key={user.id}>
-            <a href={"/account" + user.id}>
+            <a href={"/account/" + user.id}>
               {user.image} {user.firstName} {user.lastName}
             </a>
           </li>

@@ -4,20 +4,28 @@ import Header from "../../components/Header/Header";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import CardData from "../../components/Card/CardData";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { singleUser } from "../../API/api";
 
+
 export default function Account() {
+    const { id } = useParams();
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const randomId = Math.floor(Math.random() * 1000);
     const imageUrl = `https://picsum.photos/400/300?random=${randomId}`;
 
     useEffect(() => {
-        // Récupérer l'id de l'utilisateur connecté depuis le localStorage (après login)
-        const userData = localStorage.getItem("user");
-        if (userData) {
-            const userObj = JSON.parse(userData);
-            const userId = userObj.id;
+        // Si un id est passé dans l'URL, on affiche ce profil, sinon on prend l'utilisateur connecté
+        let userId = id;
+        if (!userId) {
+            const userData = localStorage.getItem("user");
+            if (userData) {
+                const userObj = JSON.parse(userData);
+                userId = userObj.id;
+            }
+        }
+        if (userId) {
             singleUser(userId).then((data) => {
                 setUser(data);
                 setLoading(false);
@@ -25,7 +33,7 @@ export default function Account() {
         } else {
             setLoading(false);
         }
-    }, []);
+    }, [id]);
 
     if (loading) {
         return <div>Chargement du profil...</div>;
