@@ -38,9 +38,15 @@ main {
     min-width: 200px;
     max-width: 300px;
     height: auto;
-    /* border: solid white; */
+    border: solid white;
     text-align: center;
+    
+    /* align-items: center; */
     /* background-color: aliceblue; */
+}
+
+.accountStyle .infoPerso {
+    
 }
 
 .accountStyle .infoPerso ul {
@@ -49,6 +55,7 @@ main {
     font-size: 20px;
     display: flex;
     flex-direction: column;
+    list-style-type: none;
 }
 
 .accountStyle .image-profil {
@@ -60,7 +67,7 @@ main {
     min-height: 80px;
     margin: 1vh auto;
     border-radius: 10%;
-    position: absolute;
+    /* position: absolute; */
     top: 13rem;
     left: 20rem;
     /* border: solid rgb(203, 237, 52); */
@@ -112,6 +119,123 @@ main {
     min-height: 32px;
 }
 
-/* ol{
-    margin-bottom: 1vh;
-} */
+/* ----------------------------vertion tablettes------------------------------------- */
+
+
+@media (max-width: 1024px) {
+    .accountStyle {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+   
+    .accountStyle .image-fond {
+        height: 18vh;
+    }
+
+  
+    .accountStyle .flexinfo {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    
+    .accountStyle .infoPerso {
+        width: 60%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+   
+    .accountStyle .image-profil {
+        position: static;
+        margin: 1rem auto;
+        width: 20vw;
+        height: 20vw;
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+   
+    .accountStyle .infoPerso ul {
+        margin-top: 2rem;
+        width: 100%;
+        font-size: 18px;
+        padding: 0;
+    }
+
+    
+    .accountStyle .stats ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 15px;
+    }
+
+   
+    .accountStyle .bouttonFollow {
+        width: 30%;
+        min-width: 100px;
+    }
+}
+
+
+/* -----------------------------vertion smartphone ------------------------------------ */
+@media (max-width: 600px) {
+    .accountStyle {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+   
+    .accountStyle .image-fond {
+        height: 15vh;
+    }
+
+   
+    .accountStyle .flexinfo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+    .accountStyle .infoPerso {
+        width: 100%;
+        text-align: center;
+    }
+
+   
+    .accountStyle .image-profil {
+        position: static;
+        margin: 1rem auto;
+        width: 30vw;
+        height: 30vw;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+   
+    .accountStyle .infoPerso ul {
+        margin-top: 1rem;
+        width: 100%;
+        font-size: 16px;
+        padding: 0;
+    }
+
+   
+    .accountStyle .stats ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 14px;
+        padding: 0;
+    }
+
+    
+    .accountStyle .bouttonFollow {
+        width: 60%;
+        min-width: unset;
+    }
+}
