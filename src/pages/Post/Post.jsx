@@ -10,7 +10,7 @@ import "./Post.css";
 function Post() {
     const { postId } = useParams();
     const [post, setPost] = useState(null);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState([]);
     const [comment, setComment] = useState([]);
 
     console.log(postId);
@@ -26,7 +26,7 @@ function Post() {
     useEffect(() => {
         async function loadUser() {
             const userData = await fetchUsers();
-            setUser(userData);
+            setUser(userData.users);
         }
         loadUser();
     }, []);
@@ -40,17 +40,18 @@ function Post() {
         loadComment();
     }, [post]);
 
+    const foundUser = user.find((element) => element.id === post.userId);
     return (
         <>
             <Header />
             <SearchBar />
             <section className="postPage">
-                {post && (
+                {post && foundUser && (
                     <Card
                         key={post.id}
-                        userFirstName="deleted account"
-                        userName="unknow"
-                        image="https://i.pinimg.com/474x/07/c4/72/07c4720d19a9e9edad9d0e939eca304a.jpg"
+                        userFirstName={foundUser.firstName}
+                        userName={foundUser.username}
+                        image={foundUser.image}
                         title={post.title}
                         body={post.body}
                         tags="test"
