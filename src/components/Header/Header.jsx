@@ -6,8 +6,6 @@ import { chargerDonnees } from "../../LocalStorage/localStorage.js";
 function Header() {
     const user = chargerDonnees();
 
-  const user = chargerDonnees();
-
 const redirection = useNavigate();
 const deconnexion = () => {
   localStorage.removeItem("user");
@@ -16,7 +14,7 @@ const deconnexion = () => {
 
 
   return (
-    <header>
+    <header className="classHeader">
       <img src="src/assets/StellarHubWhite.png" alt="logo stellarhub" />
       <nav>
         <ul>

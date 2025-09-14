@@ -78,43 +78,60 @@ header {
 
 /* --------------------------------------------------------------------------- */
 
+
+
 @media (max-width: 1024px) {
     header {
-
         height: 4vh;
-        width: 100%;
-        max-width: 20vh;
+        width: 50vw;
         flex-direction: row;
         padding: 0.5rem 1rem;
-        background-color: rgba(0, 0, 0, 0.342);
-        position: fixed;
-        top: 0;
+        background-color: transparent;
         z-index: 1000;
+        margin-top: 2vh;
     }
-
-
 
     header nav {
         display: none;
         position: absolute;
         top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.342);
+        /* left: 0; */
+        width:80%;
+        background-color: rgba(0, 0, 0, 0.822);
+        /* background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) ); */
         padding: 1rem;
-    }
+        margin-top: 2vh;
+        
 
+    }
 
     header:hover nav {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-    }
 
+    }
 
     header ul {
         flex-direction: column;
         gap: 0.5rem;
-        font-size: 1.2rem;
+        font-size: 1em;
+
+    }
+
+    header * {
+        max-width: 100%;
+        font-size: inherit;
+    }
+
+    header img {
+        max-width: 100%;
+
+    }
+
+    header button {
+        font-size: 0.9em;
+        padding: 0.4em 0.8em;
+        width: auto;
     }
 }
