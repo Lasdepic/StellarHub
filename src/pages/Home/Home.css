@@ -96,19 +96,23 @@
     }
 
     .mainPage .topPage {
-        height: 3.5rem;
+        height: 7%;
         padding: 0 0.5rem;
+        width: 72%;
+        margin-left: 0%;
+        justify-content: flex-end;
+        text-align: start;
 
     }
 
-    .mainPage .topPage {
-        width: 25vh;
-        margin-left: 35%;
-        justify-content: space-between;
+    .mainPage .topPage .Latest-posts {
+        font-size: 2rem;
 
     }
+
 
     .mainPage .topPage svg {
+        display: none;
         width: 1.2rem;
         height: 1.2rem;
 
@@ -119,10 +123,7 @@
         max-width: 100%
     }
 
-
-    /* ------------------------------------ */
-
-
+    /* --------------cards post---------------------- */
 
     .mainPage .cards {
         width: 100%;
@@ -146,6 +147,15 @@
         height: auto;
         object-fit: cover;
         gap: 0;
+
+    }
+/* ----------------------------------------------- */
+}
+
+@media (max-width: 600px) {
+
+.mainPage .topPage .Latest-posts {
+        font-size: 1rem;
 
     }
 

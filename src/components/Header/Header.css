@@ -48,11 +48,14 @@ header li a {
 
 .bouttonPost {
     width: 100%;
+    background-color: rgba(254, 153, 0, 1);
+
 }
 
 .btnProfil {
     display: flex;
     gap: 1rem;
+
 }
 
 .imageUser {
@@ -63,6 +66,7 @@ header li a {
 
 .bouttonDeconnexion {
     width: 100% !important;
+    background-color: rgba(254, 153, 0, 1);
 }
 
 header {
@@ -82,13 +86,14 @@ header {
 
 @media (max-width: 1024px) {
     header {
-        height: 4vh;
+        height: 5.5vh;
         width: 50vw;
         flex-direction: row;
         padding: 0.5rem 1rem;
         background-color: transparent;
         z-index: 1000;
         margin-top: 2vh;
+        
     }
 
     header nav {
@@ -96,12 +101,13 @@ header {
         position: absolute;
         top: 100%;
         /* left: 0; */
-        width:80%;
+        width: 80%;
         background-color: rgba(0, 0, 0, 0.822);
         /* background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) ); */
         padding: 1rem;
         margin-top: 2vh;
         
+
 
     }
 
@@ -121,7 +127,7 @@ header {
 
     header * {
         max-width: 100%;
-        font-size: inherit;
+        /* font-size: inherit; */
     }
 
     header img {
@@ -133,5 +139,6 @@ header {
         font-size: 0.9em;
         padding: 0.4em 0.8em;
         width: auto;
+
     }
 }

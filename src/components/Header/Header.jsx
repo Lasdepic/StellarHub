@@ -81,7 +81,7 @@ const deconnexion = () => {
           <li>
             <MyButton className="bouttonPost" text="Post" />
           </li>
-          <li><MyButton className="bouttonDeconnexion" text="déconnexion" onClick={()=> deconnexion()} /></li>
+          <li><MyButton className="bouttonDeconnexion" text="Déconnexion" onClick={()=> deconnexion()} /></li>
         </ul>
       </nav>
     </header>
