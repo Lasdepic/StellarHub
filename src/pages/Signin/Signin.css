@@ -22,21 +22,21 @@ html,
     gap: 0;
 }
 
-.myLogin > section:first-child {
+.myLogin>section:first-child {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.myLogin > section:last-child {
+.myLogin>section:last-child {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form {
+.myLogin form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +44,7 @@ form {
     width: 100%;
 }
 
-.cardsLogin {
+.myLogin .cardsLogin {
     background: none;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@ form {
     margin-left: 50px;
 }
 
-.cardsLogin p {
+.myLogin .cardsLogin p {
     color: #fff;
     font-size: 2rem;
     font-weight: 500;
@@ -63,7 +63,7 @@ form {
     margin-bottom: 0.5rem;
 }
 
-.signin-input {
+.myLogin .signin-input {
     width: 100%;
     padding: 0.9rem 1.2rem;
     border: none;
@@ -76,22 +76,22 @@ form {
     text-align: center;
 }
 
-.signin-input::placeholder {
+.myLogin .signin-input::placeholder {
     color: #888;
 }
 
-form > div:last-child {
+.myLogin form>div:last-child {
     margin-bottom: 1.5rem;
 }
 
-form {
+.myLogin form {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
 }
 
-#btnComponents,
+.myLogin #btnComponents,
 .signin-btn {
     width: 60%;
     margin: 0 auto;
@@ -106,7 +106,83 @@ form {
     transition: background 0.2s;
     display: block;
 }
-button:hover,
+
+.myLogin button:hover,
 .signin-btn:hover {
     background: #e68900;
+}
+
+/* ------------------responsive-------------------------- */
+
+@media (max-width: 1180px) {
+
+    .myLogin {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+   
+    .myLogin>section:first-child {
+        width: 100%;
+        display: flex;
+    }
+
+
+    .myLogin>section:last-child {
+        width: 100%;
+    }
+
+
+    .myLogin .cardsLogin {
+        width: 100%;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+
+    .myLogin .signin-input {
+        width: 100%;
+    }
+
+
+    .myLogin #btnComponents,
+    .myLogin .signin-btn {
+        width: 100%;
+    }
+
+    .myLogin form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myLogin img {
+        width: 70%;
+        height: 70%;
+    }
+
+}
+
+/* ------------------------------------- */
+
+@media (max-width:600px) {
+
+    .myLogin .signin-input {
+        width: 100%;
+    }
+
+
+    .myLogin #btnComponents,
+    .myLogin .signin-btn {
+        width: 100%;
+    }
+
+
+    .myLogin img {
+        width: 100%;
+        height: 100%;
+    }
 }
