@@ -15,7 +15,7 @@ const deconnexion = () => {
 
   return (
     <header className="classHeader">
-      <img src="src/assets/StellarHubWhite.png" alt="logo stellarhub" />
+      <img src="../src/assets/tinyStellarHubWhite.png" alt="logo stellarhub" />
       <nav>
         <ul>
           <li>
