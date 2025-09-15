@@ -4,11 +4,15 @@ import Card from "../../components/Card/Card";
 import Comment from "../../components/Comment/Comment";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { fetchUsers, fetchCommentsByPostId } from "../../API/api";
 import "./Post.css";
 
 function Post() {
     const { postId } = useParams();
     const [post, setPost] = useState(null);
+    const [user, setUser] = useState([]);
+    const [comment, setComment] = useState([]);
+
     console.log(postId);
     useEffect(() => {
         fetch(`https://dummyjson.com/posts/${postId}`)
@@ -19,17 +23,35 @@ function Post() {
             });
     }, [postId]);
 
+    useEffect(() => {
+        async function loadUser() {
+            const userData = await fetchUsers();
+            setUser(userData.users);
+        }
+        loadUser();
+    }, []);
+
+    useEffect(() => {
+        if (!post) return;
+        async function loadComment() {
+            const data = await fetchCommentsByPostId(post.id);
+            setComment(data.comments);
+        }
+        loadComment();
+    }, [post]);
+
+    const foundUser = user.find((element) => element.id === post.userId);
     return (
         <>
             <Header />
             <SearchBar />
             <section className="postPage">
-                {post && (
+                {post && foundUser && (
                     <Card
                         key={post.id}
-                        userFirstName="deleted account"
-                        userName="unknow"
-                        image="https://i.pinimg.com/474x/07/c4/72/07c4720d19a9e9edad9d0e939eca304a.jpg"
+                        userFirstName={foundUser.firstName}
+                        userName={foundUser.username}
+                        image={foundUser.image}
                         title={post.title}
                         body={post.body}
                         tags="test"
@@ -38,11 +60,17 @@ function Post() {
                     />
                 )}
                 <div className="commentDiv">
-                    <Comment />
-                    <Comment />
-                    <Comment />
-                    <Comment />
-                    <Comment />
+                    {comment.map((elem) => {
+                        return (
+                            <Comment
+                                key={elem.id}
+                                username={elem.user.username}
+                                fullName={elem.user.fullName}
+                                likes={elem.likes}
+                                body={elem.body}
+                            />
+                        );
+                    })}
                 </div>
             </section>
         </>

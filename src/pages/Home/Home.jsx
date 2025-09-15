@@ -11,7 +11,7 @@ function Home() {
             <SearchBar />
             <section className="mainPage">
                 <div className="topPage">
-                    <h2>Latest posts</h2>
+                    <h2 className="Latest-posts">Latest Posts</h2>
                     <a>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

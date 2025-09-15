@@ -1,15 +1,17 @@
 import "./comment.css";
 
-function Comment() {
+function Comment(props) {
     return (
         <div className="commentCard">
             <img src="https://pbs.twimg.com/media/F0c0sY5WYAIKyPz.jpg" alt="" />
             <div>
                 <ul>
-                    <li>Carla Deafiaa • @deafiaa</li>
-                    <li>Ratio</li>
+                    <li id="userInfo">
+                        {props.fullName} • @{props.username}
+                    </li>
+                    <li>{props.body}</li>
                     <li id="commentLikes">
-                        <p>246</p>
+                        <p>{props.likes}</p>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="24px"

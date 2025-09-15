@@ -61,6 +61,7 @@ export default function Account() {
                                 alt="image-profil"
                             />
                         </div>
+                        <div className="textInfo">
                         <ul>
                             <li>
                                 {user.firstName} {user.lastName}
@@ -78,7 +79,7 @@ export default function Account() {
                                 <p>Age: {user.age}</p>
                             </li>
                         </ul>
-                        
+                        </div>
                     </div>
                     <div className="stats">
                         <ul>

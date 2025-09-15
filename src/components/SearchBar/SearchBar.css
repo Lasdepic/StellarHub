@@ -1,26 +1,137 @@
 .searchBar {
-  height: 100%;
-  width: 23%;
+  height: 100vh;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
   right: 0;
   top: 0;
+  box-sizing: border-box;
+
 }
 
-.containerSearch {
+.searchBar .containerSearch {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
-  width: 100%;
-  margin-top: 20%;
+  width: 90%;
+  margin-top: 19%;
 }
 
-input {
+.searchBar input {
   width: 70%;
   border-radius: 20px;
   padding: 0.8rem;
   background-color: rgb(26, 26, 26);
+}
+
+.searchBar .search-results {
+
+  flex: 1 1 auto;
+  width: 80%;
+  margin: 1rem auto 0 auto;
+  border-radius: 18px;
+  list-style: none;
+  color: #fff;
+  font-size: 1.1rem;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0.5rem 0;
+  margin-right: 10px;
+}
+
+.searchBar .search-results li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.5rem 1rem;
+}
+
+.searchBar .search-results a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+}
+
+.searchBar .user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #232323;
+  flex-shrink: 0;
+}
+
+
+/*------------------------------------------------*/
+
+@media (max-width: 1024px) {
+
+  .searchBar {
+    height: 100vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+
+  }
+
+  .searchBar .containerSearch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 90%;
+    margin-top: 10%;
+  }
+
+}
+
+/* ------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .searchBar {
+    height: 50vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .searchBar .containerSearch {
+    margin-top: 8%;
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  .searchBar input {
+    color: rgb(252, 252, 252);
+    width: 66%;
+    background-color: rgb(0, 0, 0);
+    padding: 6%;
+  }
+
+  .searchBar svg {
+    display: none;
+  }
+
+  .searchBar .search-results {
+    width: 90%;
+    color: #fff;
+    font-size: 1.1rem;
+    height: 100%;
+    overflow-y: auto;
+    margin-right: 15px;
+  }
+
 }

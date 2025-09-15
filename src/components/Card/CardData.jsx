@@ -21,6 +21,17 @@ function CardData() {
         }
         loadUsers();
     }, []);
+
+    useEffect(() => {
+        function sortByLikes() {
+            const sortedLikes = posts.sort(
+                (a, b) => a.reactions.likes - b.reactions.likes
+            );
+            setPosts(sortedLikes);
+        }
+        sortByLikes();
+    }, []);
+
     return (
         <div className="postsDiv">
             {posts.map((elem) => {

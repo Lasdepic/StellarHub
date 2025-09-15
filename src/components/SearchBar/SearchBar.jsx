@@ -33,7 +33,7 @@ function SearchBar() {
                     value={input}
                     onChange={handleChange}
                     type="text"
-                    placeholder="Rechercher un utilisateur ..."
+                    placeholder="Rechercher ..."
                 />
             </div>
             <ul className="search-results">
